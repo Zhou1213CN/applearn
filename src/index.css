@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button{
+  padding: 0;
+  border:0;
+  background: none;
+  font-size: 100%;
+  font-family: inherit;
+  
+}
+
+img{
+  width:40px;
+  height:40px;
+}
+
+button:focus{
+  outline: none;
+}
