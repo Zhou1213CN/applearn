@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/applearn/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/applearn/static/js/main.714cbecd.chunk.js",
+    "main.js.map": "/applearn/static/js/main.714cbecd.chunk.js.map",
+    "runtime-main.js": "/applearn/static/js/runtime-main.33f3d9e7.js",
+    "runtime-main.js.map": "/applearn/static/js/runtime-main.33f3d9e7.js.map",
+    "static/js/2.27a8053f.chunk.js": "/applearn/static/js/2.27a8053f.chunk.js",
+    "static/js/2.27a8053f.chunk.js.map": "/applearn/static/js/2.27a8053f.chunk.js.map",
+    "static/js/3.6a28c5b5.chunk.js": "/applearn/static/js/3.6a28c5b5.chunk.js",
+    "static/js/3.6a28c5b5.chunk.js.map": "/applearn/static/js/3.6a28c5b5.chunk.js.map",
+    "index.html": "/applearn/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/applearn/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.27a8053f.chunk.js.LICENSE.txt": "/applearn/static/js/2.27a8053f.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/applearn/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33f3d9e7.js",
+    "static/js/2.27a8053f.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.714cbecd.chunk.js"
+  ]
+}
