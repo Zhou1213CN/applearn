@@ -9,7 +9,7 @@ function App() {
     <div className={css.container}>
       <Header/>
       <main>
-        hsf
+        Welcome to everything distributed
         <Home/>
       </main>
       <Navbar/>
