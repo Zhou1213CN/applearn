@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/applearn/static/css/main.591b4df4.chunk.css",
-    "main.js": "/applearn/static/js/main.8c2f3ecb.chunk.js",
-    "main.js.map": "/applearn/static/js/main.8c2f3ecb.chunk.js.map",
+    "main.css": "/applearn/static/css/main.d20b36f3.chunk.css",
+    "main.js": "/applearn/static/js/main.414c1a41.chunk.js",
+    "main.js.map": "/applearn/static/js/main.414c1a41.chunk.js.map",
     "runtime-main.js": "/applearn/static/js/runtime-main.0e1a394f.js",
     "runtime-main.js.map": "/applearn/static/js/runtime-main.0e1a394f.js.map",
-    "static/js/2.6596adc5.chunk.js": "/applearn/static/js/2.6596adc5.chunk.js",
-    "static/js/2.6596adc5.chunk.js.map": "/applearn/static/js/2.6596adc5.chunk.js.map",
+    "static/js/2.24aa40da.chunk.js": "/applearn/static/js/2.24aa40da.chunk.js",
+    "static/js/2.24aa40da.chunk.js.map": "/applearn/static/js/2.24aa40da.chunk.js.map",
     "static/js/3.96c6a381.chunk.js": "/applearn/static/js/3.96c6a381.chunk.js",
     "static/js/3.96c6a381.chunk.js.map": "/applearn/static/js/3.96c6a381.chunk.js.map",
     "index.html": "/applearn/index.html",
-    "static/css/main.591b4df4.chunk.css.map": "/applearn/static/css/main.591b4df4.chunk.css.map",
-    "static/js/2.6596adc5.chunk.js.LICENSE.txt": "/applearn/static/js/2.6596adc5.chunk.js.LICENSE.txt",
+    "static/css/main.d20b36f3.chunk.css.map": "/applearn/static/css/main.d20b36f3.chunk.css.map",
+    "static/js/2.24aa40da.chunk.js.LICENSE.txt": "/applearn/static/js/2.24aa40da.chunk.js.LICENSE.txt",
     "static/media/CSdpt.6ec70e83.jpeg": "/applearn/static/media/CSdpt.6ec70e83.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.0e1a394f.js",
-    "static/js/2.6596adc5.chunk.js",
-    "static/css/main.591b4df4.chunk.css",
-    "static/js/main.8c2f3ecb.chunk.js"
+    "static/js/2.24aa40da.chunk.js",
+    "static/css/main.d20b36f3.chunk.css",
+    "static/js/main.414c1a41.chunk.js"
   ]
 }
