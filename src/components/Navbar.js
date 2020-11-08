@@ -8,7 +8,7 @@ function Navbar() {
         <nav className={css.navbar}>
 
             <div className={css.navItem}>
-            <Link to="/Login">
+            <Link to="/login">
                 
                     <img src={publicUrl('/assets/Home.png')} alt="Home"/>
                 
@@ -20,9 +20,10 @@ function Navbar() {
              </Link>
             </div>
             <div className={css.navItem}>
-                <button>
+            <Link to="/Quiz">
+               
                     <img src={publicUrl('/assets/List.png')} alt="Quiz"/>
-                </button>
+                    </Link>
             </div>
         </nav>
   );

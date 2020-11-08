@@ -4,7 +4,7 @@ import Header from './Header.js'
 import Home from './Home.js'
 import Navbar from './Navbar.js'
 import Login from './Login.js'
-
+import Quiz from './Quiz.js'
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +21,11 @@ function App() {
             <Route path="/home">
             <div>
               <Home/>
+            </div>
+            </Route>
+            <Route path="/quiz">
+            <div>
+              <Quiz/>
             </div>
             </Route>
             <Route path="/">

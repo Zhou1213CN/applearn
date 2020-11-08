@@ -29,7 +29,7 @@ function Login() {
             </div>
             <div className={css.Appcontent}>
             <Link to="/home">
-                <Button classes={{root: classes.root}}variant="contained" color="primary" size="large">
+                <Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
                     Start Learning
                 </Button>
             </Link>

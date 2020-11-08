@@ -16,3 +16,21 @@
   a {
     text-decoration: none;
   }
+
+.dplayer-wrap{
+  display: none;
+}
+
+
+.dplayer-video-wrap {
+    display: none;
+}
+.dplayer-controller-mask {
+    display: none;
+}
+.dplayer-controller {
+    display: none;
+}
+.dplayer-notice {
+    display: none;
+}
