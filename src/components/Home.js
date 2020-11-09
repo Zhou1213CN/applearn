@@ -28,12 +28,13 @@ function Home() {
     ],
       defaultQuality: 0,
 
-       
+
     },
     danmaku: {
       id:'Firstclass',
       //api: 'https://api.prprpr.me/dplayer/',
-      api:'https://dplayer.moerats.com/',
+      //api:'https://dplayer.moerats.com/',
+      api:'http://ip:1207',
       //addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=[aid]'],
       addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142'],
     },
@@ -74,7 +75,7 @@ dp.danmaku.send(
 
 
   return (
-   
+
     <div>
 
       <div>
