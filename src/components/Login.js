@@ -28,15 +28,21 @@ function Login() {
                 <Header/>
             </div>
             <div className={css.Appcontent}>
-            <Link to="/home">
+            <Link to="/Home">
                 <Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
-                    Start Learning
+                <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku
                 </Button>
-            </Link>
+                    
+             </Link> 
+            
+            <br></br>
+            
+            <a href="quiz.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
+            <img src={publicUrl('/assets/Question.png')} alt="Question"/> With Quiz
+                </Button></a>
             </div>
-            <div>
-      <Navbar/>
-    </div>
+        
+    
         </div>
     )
 }

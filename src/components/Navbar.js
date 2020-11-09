@@ -2,6 +2,8 @@ import React from 'react';
 import css from './Navbar.module.css';
 import publicUrl from '../utils/publicUrl';
 import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 
 function Navbar() {
   return (
@@ -13,18 +15,19 @@ function Navbar() {
                     <img src={publicUrl('/assets/Home.png')} alt="Home"/>
                 
             </Link>
+
             </div>
             <div className={css.navItem}>
             <Link to="/Home">
                     <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/>
-             </Link>
+             </Link>  
+         
             </div>
             <div className={css.navItem}>
-            <Link to="/Quiz">
-               
-                    <img src={publicUrl('/assets/List.png')} alt="Quiz"/>
-                    </Link>
+            <a href="quiz.html"> <img src={publicUrl('/assets/List.png')} alt="Quiz"/></a>
             </div>
+            
+        
         </nav>
   );
 }

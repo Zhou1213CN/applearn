@@ -10,13 +10,29 @@ function Home() {
     container: document.getElementById('dplayer'),
     //live: true,
     screenshot: true,
+    hotkey: true,
+
     video: {
-       url: publicUrl('/assets/Firstclass.mp4'),
+       //url: publicUrl('/assets/Firstclass.mp4'),
        pic: publicUrl('/assets/bclogo.jpeg'),
+       quality: [{
+        name: 'HD',
+        url: publicUrl('/assets/Firstclass.mp4'),
+        type: 'hls',
+    },
+    {
+        name: 'SD',
+        url: publicUrl('/assets/test.mov'),
+        type: 'normal',
+    },
+    ],
+      defaultQuality: 0,
+
+       
     },
     danmaku: {
       id:'Firstclass',
-   //api: 'https://api.prprpr.me/dplayer/',
+      //api: 'https://api.prprpr.me/dplayer/',
       api:'https://dplayer.moerats.com/',
       //addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=[aid]'],
       addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142'],
@@ -25,8 +41,36 @@ function Home() {
 
   const dp = new DPlayer(options);
 
+  dp.danmaku.draw({
+    text: 'DIYgod is amazing',
+    color: '#fff',
+    type: 'top',
+});
 
-  //dp.danmaku.show();
+dp.danmaku.send(
+  {
+      text: 'dplayer is amazing',
+      color: '#b7daff',
+      type: 'right', // should be `top` `bottom` or `right`
+  },
+  function () {
+      console.log('success');
+  }
+);
+
+dp.danmaku.send(
+  {
+      text: 'dplayer is amazing',
+      color: '#b7dafe',
+      type: 'right', // should be `top` `bottom` or `right`
+  },
+  function () {
+      console.log('success');
+  }
+);
+
+
+  dp.danmaku.show();
 
 
   return (
