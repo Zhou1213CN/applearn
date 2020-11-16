@@ -21,4 +21,4 @@ Deploy the site and test the danmaku.
 ### References
 * [Dplayer](http://dplayer.js.org/guide.html#installation)
 * [Backend](https://github.com/MoePlayer/DPlayer-node)
-* [API](https://www.moerats.com/archives/838/#%E4%BD%BF%E7%94%A8)
+* [Danmaku API](https://www.moerats.com/archives/838/#%E4%BD%BF%E7%94%A8)
