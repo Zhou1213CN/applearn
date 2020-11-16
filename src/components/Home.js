@@ -33,10 +33,10 @@ function Home() {
     danmaku: {
       id:'Firstclass',
       //api: 'https://api.prprpr.me/dplayer/',
-      //api:'https://dplayer.moerats.com/',
-      api:'http://ip:1207',
+      api:'https://dplayer.moerats.com/',
+      //api:'http://ip:1207',
       //addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=[aid]'],
-      addition: ['https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142'],
+      addition: ['https://api.prprpr.me/dplayer/bilibili?aid=4157142'],
     },
   };
 
