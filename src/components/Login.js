@@ -28,7 +28,7 @@ function Login() {
                 <Header/>
             </div>
             <div className={css.Appcontent}>
-            <Link to="/Home">
+            <Link to="/newLecture">
                 <Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
                 <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku
                 </Button>
