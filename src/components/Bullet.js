@@ -1,25 +1,28 @@
 import TimeManager from './TimeManager.js';
 
+<button onclick="myFunction()">Try it</button>
 
-let danmaku = [];
+let danmaku = ["test","1"];
 export default class Bullet{
     
     elem;
     x;
     speedX=2;
     width;
- 
-   // danmaku = [];
+  //  storage = [];
+
     constructor(txt){
         this.elem = this.createElem(txt);
-       
+       // this.storage = this.storage.push(txt);
     }
+
     createElem(txt){
         console.log(txt,"ugyftug");
         if(this.elem) return
         danmaku.push(txt);
+        console.log(danmaku,"hello")
         let div = document.createElement("div");
-        div.setAttribute("id","div1");
+        //div.setAttribute("id","div1");
         Object.assign(div.style,{
             position:"absolute",
             whiteSpace: "nowrap",
@@ -27,9 +30,13 @@ export default class Bullet{
              //color:"#000",
             color:"#e00",
         })
+
         div.textContent = txt;
+        console.log(this.storage,".")
         return div
     }
+
+
     appendTo(parent){
         if(typeof parent === "string") parent = document.querySelector(parent);
         parent.appendChild(this.elem);
@@ -50,6 +57,7 @@ export default class Bullet{
             this.elem = null;
         }
     }
+
 }
 
-console.log(danmaku,"123")
+

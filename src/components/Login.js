@@ -20,6 +20,15 @@ const useStyles = makeStyles({
     }
 })
 
+/*
+<Link to="/newLecture">
+                <Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
+                <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku
+                </Button>
+                    
+             </Link> 
+ */
+
 function Login() {
     const classes = useStyles();
     return (
@@ -28,22 +37,24 @@ function Login() {
                 <Header/>
             </div>
             <div className={css.Appcontent}>
-            <Link to="/newLecture">
-                <Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
-                <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku
-                </Button>
-                    
-             </Link> 
+            
+            
+            <a href="dan.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
+            <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku
+                </Button></a>
+        
             
             <br></br>
-            
+          
             <a href="quiz.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
             <img src={publicUrl('/assets/Question.png')} alt="Question"/> With Quiz
                 </Button></a>
             </div>
         
     
+            <div><Navbar/></div>
         </div>
+        
     )
 }
 

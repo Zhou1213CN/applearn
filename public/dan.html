@@ -1,22 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<style>
-</style>
-</head>
-<body>
-    <div>jo</div>
-<script type="module">
-import Player from 'Player.js';
-import TimeManager from 'TimeManager.js';
-import Bullet from 'Bullet.js';
-import publicUrl from '../utils/publicUrl';
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
 
-let player = new Player("Firstclass.mp4");
-player.appendTo("body");
-</script>
-</body>
-</html>
+    <title>Danmaku Mode</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+  </head>
+  <body>
+    <div class="container">
+        <div>
+        <h1 class="title">Interactive Learning Classroom</h1>
+        </div>
+
+        <div id="box" class="box">
+        <video id="vid" align="center" width=500px height=400px src="assets/Firstclass.mp4" controls></video>
+        </div>
+        <input type="text" id="txt" />
+        <button onclick="send()" >Submit</button> 
+        <!---<button onclick="postData()" >Submit</button> !-->
+
+
+        <script>
+        
+            var word1 = $('txt').value;
+            console.log(word1,"gte")
+                function $(str) {
+                return document.getElementById(str);
+                }
+                function send() {
+                    console.log($('txt').value,"gte")
+                var word = $('txt').value;
+                var span = document.createElement('span');
+                var top = parseInt(Math.random() * 500) - 20;
+              //var top = 20;
+                var color1 = parseInt(Math.random() * 256);
+                var color2 = parseInt(Math.random() * 256);
+                var color3 = parseInt(Math.random() * 256);
+                var color = "rgb(" + color1 + "," + color2 + "," + color3 + ")";
+                top = top < 0 ? 0 : top;
+                span.style.position = 'absolute';
+                span.style.top = top + "px";
+                span.style.color = color;
+                span.style.left = '200px';
+                span.style.whiteSpace = 'nowrap';
+                var nub = (Math.random() * 10) + 1;
+                span.setAttribute('speed', nub);
+                span.speed = nub;
+                span.innerHTML = word;
+                $('box').appendChild(span);
+                $('txt').value = "";
+
+                //Post the data into the lean cloud
+                /*fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
+                    method: 'POST',
+                    headers: {
+                        'X-LC-Id': 'HspftATLprWndYJMnb7veqTz-MdYXbMMI',
+                        'X-LC-Key': '636J7uKrOdDRoiYjz6lpIjCD,master',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({"content":word})
+                });*/
+
+
+                }
+                    setInterval(move, 200);
+                    function move() {
+                    var spanArray = $('box').children;
+                    for (var i = 0; i < spanArray.length; i++) {
+                    spanArray[i].style.left =
+                    parseInt(spanArray[i].style.left) - spanArray[i].speed + 'px';
+                    }
+                }
+            
+
+            
+        </script>
+            </div>
+    
+   <!--<script src="Quiztest.js"></script>
+
+<video id="vid" align="center" controls>
+    --> 
+    <a href="index.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
+        <img src="assets/Home.png" height=44px width=44px alt="Question"/>
+       
+            </Button></a>
+    
+
+  </body>
+  </html>

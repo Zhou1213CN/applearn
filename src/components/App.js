@@ -55,6 +55,12 @@ function App() {
               onDanmaku={addDanmaku}/>
             </div>
             </Route>*/
+  
+            /*<div>
+              {<Home
+              store={store}
+              onDanmaku={addDanmaku}/>
+            </div> */
   return (
 		<Router basename={process.env.PUBLIC_URL}>
       
@@ -73,11 +79,8 @@ function App() {
             </div>
             </Route>
             <Route path="/home">
-            <div>
-              <Home
-              store={store}
-              onDanmaku={addDanmaku}/>
-            </div>
+            <Home/>
+
             </Route>
             
             <Route path="/">

@@ -1,13 +1,14 @@
 import Bullet from './Bullet.js';
 
-//console.log(danmakus);
+let danmaku = ["test","1","hi"];
+
 export default class Player extends EventTarget{
     
-    //static danmakus = [];
     static WIDTH=638;
     static HEIGHT=493;
-    input;
 
+    input;
+    //danmaku1 = [];
 
     constructor(path){
         super();
@@ -18,8 +19,12 @@ export default class Player extends EventTarget{
         if(e.keyCode !== 13) return;
         if(this.input.value.trim().length===0) return;
         let b = new Bullet(this.input.value);
-        console.log(this.elem, "gftdryf")
+       //let c = new Bullet(this.text.value);
+       // this.danmaku1.value.push(this.input.value);
+      //  console.log(this.danmaku1.value, "test");
+      //  console.log(this.input.value, "gftdryf");
         b.appendTo(this.elem);
+        console.log(this.elem, "element")
         this.input.value = "";
     }
     /*addDanmaku(text){
@@ -88,7 +93,7 @@ export default class Player extends EventTarget{
             height:"361px",
             position:"relative",
             userSelect:"none",
-        })
+        })                                                                                              
         let video = document.createElement("video");
         video.src = path;
         video.controls = "controls";
@@ -117,8 +122,18 @@ export default class Player extends EventTarget{
             height:"46px",
             
         })
+
+        let chatArea = document.createElement("div");
+        Object.assign(chatArea.style,{
+            width:"100%",
+            height:"200px",
+            color:"#212121",
+            
+        })
+
+
         this.input = document.createElement("input");
-        this.input.setAttribute("id","div1");
+   
         //input area
         Object.assign(this.input.style,{
            // width:"130px",
@@ -136,17 +151,22 @@ export default class Player extends EventTarget{
             backgroundColor:"#f4f4f4",
         })
         bottomArea.appendChild(this.input);
- 
+        
+       // chatArea.appendChild(this.input);
+        
         videoWrap.appendChild(videoTop);
         videoWrap.appendChild(videoContent);
         videoWrap.appendChild(videoControlWrap);
  
         player.appendChild(videoWrap);
         player.appendChild(bottomArea);
-        
+        player.appendChild(chatArea);
+
+     
+     // chatArea.appendChild(danmaku);
+
+      console.log(chatArea,"chat");
         return player;
         
     }
 }
-
-console.log(Player.elem,"tui");

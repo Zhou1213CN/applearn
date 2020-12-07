@@ -9,10 +9,16 @@ import { useParams } from 'react-router-dom';
 // {lectures.sort((a,b)=>new Date(b.datetime) - new Date(a.datetime))}
 // {lectures.sort((a,b)=>new Date(b.datetime) - new Date(a.datetime)).map(lecture=> <Lecture lecture={lecture}/>)}
 
-function Home(props){
-  let player = new Player(publicUrl('/assets/Firstclass.mp4'));
-  player.appendTo("body");
+/*function Home(props){
+ // let comments = [];
+  //let player = new Player(publicUrl('/assets/Firstclass.mp4'));
+  //player.appendTo("body");
 
+  //let test = Player.;
+//  let test = Player.danmaku1;
+  //comments.push(test);
+  //let test = Player.;
+  console.log(comments,"test2");
   const store = props.store;
   let {lectureId} = useParams();
   const lectures = lectureId===undefined? store.lectures:store.lectures.filter(lecture => lecture.id === lectureId);
@@ -27,4 +33,16 @@ function Home(props){
     );
   }
   
+  export default Home;
+  */
+
+
+  function Home(props){
+    return (
+      <div>
+        hi
+      </div>
+    )
+  }
+
   export default Home;
