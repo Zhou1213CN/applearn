@@ -146,35 +146,74 @@
                     console.log(typeof(data),"h");
                     let tab =  
                         `<tr> 
-                        <th>Number</th> 
-                        <th>Content</th> 
-                        <th>ObjectId</th> 
-                        <th>UpdatedAt</th> 
+                        <th>DanmakuContent</th> 
+                        <th>DanmakuNumberofLikes</th> 
+                        <th>DanmakuDate</th> 
                         </tr>`; 
-                    
-                    // Loop to access all rows  
-                    /*for (let r of data.list) { 
-                        tab += `<tr>  
-                    <td>${r.number} </td> 
-                    <td>${r.content}</td> 
-                    <td>${r.objectId}</td>  
-                    <td>${r.updatedAt}</td>           
-                </tr>`; }*/
-                //var i;
-              /*
-                for (const [key, value] of Object.entries(data)) {
-                     console.log(`${key}: ${value}`,"hi");
-                     tab += `<tr>  
-                    <td>${value} </td> 
-                             
-                </tr>`; }*/
-                
-         
-                    
-                    
-                    // Setting innerHTML as tab variable 
+                    for (let r of Object.keys(data)) { 
+                        console.log(r,"r")
+                       // console.log(typeof(data),"h")
+                        for (let j of (Object.keys(data[r]))) { 
+                            console.log(j,"j")
+                        // var a = Object.keys(data[r])[0]
+                            //console.log(typeof(Object.keys(object2[r])[0]))
+                        //  if a == number {console.log("ha")}
+                            var a = data[r][j];
+                            console.log(a["content"],"a")
+                            tab += `<tr>  
+                                    <td>${a["content"]} </td> 
+                                    <td>${a["number"]} </td> 
+                                    <td>${a["createdAt"]} </td> 
+                                </tr>`;
+                        }
+                    }
                     document.getElementById("Danmakus").innerHTML = tab;  
                 }
+                        //for (let k of (Object.keys(data[r][j]))) { 
+                             
+                           /* if (k == "content")
+                            {
+                               // console.log(k,"k")
+                                var b = Object.values(data[r][j]["content"])
+                            //console.log(b,"hello")
+                            tab += `<tr>  
+                                    <td>${b} </td> 
+                                </tr>`; }
+                                {
+                               
+                            var b1 = Object.values(data[r][j])
+                            //console.log(b,"hello")
+                            tab += `<tr>  
+                                    <td>${b1} </td> 
+                                </tr>`; }/
+                            
+                            
+                            
+
+                            
+                            }
+                        }   
+                    }
+                    document.getElementById("Danmakus").innerHTML = tab; 
+                }
+                    
+                    // Loop to access all rows  
+                    /*for (let r of Object.keys(object2)) { 
+                        for (let j of Object.keys(object2[r])) { 
+                            var a = object2[r][j];
+                            console.log(r,a)
+                            tab +=  `<tr>  
+                            <td>${r} </td> 
+                            <td>${a} </td> 
+                        </tr>`; }
+                        }
+                    // Setting innerHTML as tab variable 
+                    document.getElementById("Danmakus").innerHTML = tab;  
+                }*/
+              
+            
+
+
         </script>
        
         <!--    //Get the data from the cloud
@@ -309,7 +348,7 @@
             </div> 
             <h1>Danmakus</h1> 
             <!-- table for showing data -->
-            <table id="danmakus"></table> 
+            <table id="Danmakus"></table> 
     
     <a href="index.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
         <img src="assets/Home.png" height=44px width=44px alt="Question"/>
