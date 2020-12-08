@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/applearn/static/css/main.44b12252.chunk.css",
-    "main.js": "/applearn/static/js/main.a7771d8e.chunk.js",
-    "main.js.map": "/applearn/static/js/main.a7771d8e.chunk.js.map",
+    "main.js": "/applearn/static/js/main.4c735b5a.chunk.js",
+    "main.js.map": "/applearn/static/js/main.4c735b5a.chunk.js.map",
     "runtime-main.js": "/applearn/static/js/runtime-main.2520f69f.js",
     "runtime-main.js.map": "/applearn/static/js/runtime-main.2520f69f.js.map",
     "static/js/2.786f2cb0.chunk.js": "/applearn/static/js/2.786f2cb0.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2520f69f.js",
     "static/js/2.786f2cb0.chunk.js",
     "static/css/main.44b12252.chunk.css",
-    "static/js/main.a7771d8e.chunk.js"
+    "static/js/main.4c735b5a.chunk.js"
   ]
 }
