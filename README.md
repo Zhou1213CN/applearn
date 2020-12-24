@@ -18,7 +18,8 @@ You will also see any lint errors in the console.
 
 Deploy the site and test the danmaku.
 
-### References
-* [Dplayer](http://dplayer.js.org/guide.html#installation)
-* [Backend](https://github.com/MoePlayer/DPlayer-node)
-* [Danmaku API](https://www.moerats.com/archives/838/#%E4%BD%BF%E7%94%A8)
+## TODO
+
+- [ ] Like function
+- [ ] Beautify the project
+- [ ] Upload video
