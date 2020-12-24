@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import css from './App.module.css'
 import Header from './Header.js'
-import Home from './Home.js'
 import Navbar from './Navbar.js'
 import Login from './Login.js'
 import NewLecture from './NewLecture.js';
@@ -14,8 +13,7 @@ import initialStore from '../utils/initialStore';
 import uniqueId from '../utils/uniqueId';
 
 function App() {
-  //const [page, setPage] = useState('home');
- // const [page, setPage] = useState('login');
+
 
   const [store, setStore] = useState(initialStore);
 
@@ -77,10 +75,6 @@ function App() {
                 store={store}
                 addLecture={addLecture}/>
             </div>
-            </Route>
-            <Route path="/home">
-            <Home/>
-
             </Route>
             
             <Route path="/">

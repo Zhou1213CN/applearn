@@ -18,7 +18,35 @@
     
   </head>
   <style>
-    body {background-color: powderblue;}
+      @import url(https://fonts.googleapis.com/css?family=Gabriela|Dosis:200);
+
+            body {
+            font-family: "Vidaloka", serif;
+            
+            font-weight: normal;
+            background: #151618;
+            color: #FFF;
+            margin: 0;
+            }
+
+    h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+    font-size: 16px;
+    }
+
+    p {
+    line-height: 1.6em;
+    text-align: center;
+    font-size: 14px;
+    }
+    body {
+        
+        background-color: powderblue;
+        transform-style: preserve-3d;
+	    transform: perspective(800px);
+    }
     h1   {color: blue;
         text-align: center;}
     video {
@@ -28,16 +56,22 @@
         height: auto;
         width: max-content;
     }
+    button {
+        align-items: center;
+    }
+    
+    
+
     </style>
   <body>
-    <div class="container">
+    <div id="container" class="container">
         <div>
         <h1 class="title">Interactive Learning Classroom</h1>
         </div>
 
         <div id="box" class="box">
         
-        <video vid="lecture1" src="assets/Firstclass.mp4" controls></video>
+        <video vid="lecture1" preload="true" src="assets/Firstclass.mp4" controls></video>
         </div>
         <form>
         <fieldset>
@@ -46,22 +80,23 @@
 
         </fieldset>
         </form>
-        <button onclick="send()" >Submit</button> 
-        <script>
         
-      //  import Filter from './Filter.js';
-          //  danmaku = [];
+        <button onclick="send()" classes={{root: classes.root}}variant="contained" color="primary" size="large">Submit</button> 
+        <script>
+    
             var word1 = $('txt').value;
             const { Query, User } = AV;
             
-           // console.log(word1,"gte")
                 function $(str) {
                 return document.getElementById(str);
                 }
                 function send() {
                     console.log($('txt').value,"gte")
                 var word = $('txt').value;
+
+                //Create a danmaku with a span
                 var span = document.createElement('span');
+                var but = document.createElement('button');
                 var top = 145 + parseInt(Math.random() * 300);
                 var color1 = parseInt(Math.random() * 256);
                 var color2 = parseInt(Math.random() * 256);
@@ -69,20 +104,30 @@
                 var color = "rgb(" + color1 + "," + color2 + "," + color3 + ")";
                 top = top < 0 ? 0 : top;
                 span.style.position = 'absolute';
+                but.style.position = 'absolute';
                 span.style.top = top + "px";
+                but.style.top = top -20 + "px";
                 span.style.color = color;
+                but.style.color = color;
                 span.style.left = '700px';
                 span.style.fontSize = '45px';
                 span.style.whiteSpace = 'nowrap';
+                but.style.left = '700px';
+               // but.style.fontSize = '35px';
+                var t = document.createTextNode("Like");
+                but.appendChild(t);
+                span.appendChild(but);
                 var nub = (Math.random() * 10) + 1;
                 span.setAttribute('speed', nub);
                 span.speed = nub;
+                but.speed = nub;
                 span.innerHTML = word;
                 $('box').appendChild(span);
+                $('box').appendChild(but);
                 $('txt').value = "";
-               // danmaku.push($('txt').value);
+
                  //Post the data into the lean cloud
-                /*fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
+                fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
                     method: 'POST',
                     headers: {
                         'X-LC-Id': 'HspftATLprWndYJMnb7veqTz-MdYXbMMI',
@@ -90,7 +135,7 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({"content":word})
-                });*/
+                });
             }
                 setInterval(move, 200);
                     function move() {
@@ -101,15 +146,6 @@
                     }
                 }
 
-                /*fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
-                    headers: {
-                        'X-LC-Id': 'HspftATLprWndYJMnb7veqTz-MdYXbMMI',
-                        'X-LC-Key': 'lwFT7yRJSzNSHKhwBy4O46Qa',
-                        'Content-Type': 'application/json'
-                    }
-                }).then(response => response.json())
-                .then(data => show(data));*/
-
                 // api url 
                 const api_url =  
                 'https://HspftATL.api.lncldglobal.com/1.1/classes/content'; 
@@ -117,6 +153,7 @@
                 // Defining async function 
                 async function getapi(url) { 
                     
+                    //Get the data from LeanCLoud
                     // Storing response 
                     const response = await fetch(url, {
                     headers: {
@@ -155,9 +192,6 @@
                        // console.log(typeof(data),"h")
                         for (let j of (Object.keys(data[r]))) { 
                             console.log(j,"j")
-                        // var a = Object.keys(data[r])[0]
-                            //console.log(typeof(Object.keys(object2[r])[0]))
-                        //  if a == number {console.log("ha")}
                             var a = data[r][j];
                             console.log(a["content"],"a")
                             tab += `<tr>  
@@ -169,192 +203,25 @@
                     }
                     document.getElementById("Danmakus").innerHTML = tab;  
                 }
-                        //for (let k of (Object.keys(data[r][j]))) { 
-                             
-                           /* if (k == "content")
-                            {
-                               // console.log(k,"k")
-                                var b = Object.values(data[r][j]["content"])
-                            //console.log(b,"hello")
-                            tab += `<tr>  
-                                    <td>${b} </td> 
-                                </tr>`; }
-                                {
-                               
-                            var b1 = Object.values(data[r][j])
-                            //console.log(b,"hello")
-                            tab += `<tr>  
-                                    <td>${b1} </td> 
-                                </tr>`; }/
-                            
-                            
-                            
-
-                            
-                            }
-                        }   
-                    }
-                    document.getElementById("Danmakus").innerHTML = tab; 
-                }
-                    
-                    // Loop to access all rows  
-                    /*for (let r of Object.keys(object2)) { 
-                        for (let j of Object.keys(object2[r])) { 
-                            var a = object2[r][j];
-                            console.log(r,a)
-                            tab +=  `<tr>  
-                            <td>${r} </td> 
-                            <td>${a} </td> 
-                        </tr>`; }
-                        }
-                    // Setting innerHTML as tab variable 
-                    document.getElementById("Danmakus").innerHTML = tab;  
-                }*/
-              
-            
-
-
         </script>
        
-        <!--    //Get the data from the cloud
-            /*fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
-                    headers: {
-                        'X-LC-Id': 'HspftATLprWndYJMnb7veqTz-MdYXbMMI',
-                        'X-LC-Key': 'lwFT7yRJSzNSHKhwBy4O46Qa',
-                        'Content-Type': 'application/json'
-                    }
-                }).then(response => response.json())
-                   .then(data => console.log(data,"hi"));*/
 
-
-                  /* async function getapi() { 
-    
-                    // Storing response 
-                    const response = await fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
-                    headers: {
-                        'X-LC-Id': 'HspftATLprWndYJMnb7veqTz-MdYXbMMI',
-                        'X-LC-Key': 'lwFT7yRJSzNSHKhwBy4O46Qa',
-                        'Content-Type': 'application/json'
-                    }
-                }); 
-                    
-                    // Storing data in form of JSON 
-                    var data = await response.json(); 
-                    console.log(data); 
-                    if (response) { 
-                        //hideloader(); 
-                    } 
-                    show(data); 
-                } 
-                // Calling that async function 
-                getapi(); */
-
-            
-           
-             // Function to define innerHTML for HTML table 
-             /*function show(data) { 
-                    let tab =  
-                        `<tr> 
-                        <th>Number</th> 
-                        <th>Content</th> 
-                        <th>ObjectId</th> 
-                        <th>UpdatedAt</th> 
-                        </tr>`; 
-                    
-                    // Loop to access all rows  
-                    for (let r of data.list) { 
-                        tab += `<tr>  
-                    <td>${r.number} </td> 
-                    <td>${r.content}</td> 
-                    <td>${r.objectId}</td>  
-                    <td>${r.updatedAt}</td>           
-                </tr>`; 
-                    } 
-                    // Setting innerHTML as tab variable 
-                    document.getElementById("Danmakus").innerHTML = tab;  
-                }*/
-                
-                
-            /*function getapi() { 
-              
-                    show(data); 
-                } 
-                // Calling that function 
-                getapi(); */
-              // Defining async function 
-              /*function getapi() { 
-                    
-                    // Storing response 
-                    const response = fetch('https://HspftATL.api.lncldglobal.com/1.1/classes/content', {
-                    headers: {
-                        'X-LC-Id': 'HspftATLprWndYJMnb7veqTz-MdYXbMMI',
-                        'X-LC-Key': 'lwFT7yRJSzNSHKhwBy4O46Qa',
-                        'Content-Type': 'application/json'
-                    }
-                });
-                    
-                    // Storing data in form of JSON 
-                    var data = response.json(); 
-                    console.log(data,"hu"); 
-                    if (response) { 
-                        hideloader(); 
-                    } 
-                    show(data); 
-                    
-                
-                // Function to hide the loader 
-                function hideloader() { 
-                    document.getElementById('loading').style.display = 'none'; 
-                } 
-                    
-                /*fetch('assets/danmaku.json')
-                                .then(response => {
-                return response.json();
-                })
-                .then(data => {
-                console.log(data);
-                    Filter(data);
-                });
-                
-                
-            
--->
-                      
        
-     <!--    <div class="d-flex justify-content-center"> 
-            <div class="spinner-border" 
-                 role="status" id="loading"> 
-                <span class="sr-only">Loading...</span> 
+        <div class> 
+            <div class 
+                    role="status" id="loading"> 
+                <span class>Loading...</span> 
             </div> 
-        </div> 
-        <h1>Danmakus</h1> 
-       //table for showing data
-        <table id="danmaku"></table> 
-        <div>
-
-            <h1 class="title">Chat Area</h1>
-            <div class="search">
-                <input type="search" name='danmaku' placeholder="Search Danmakus...">
-                <p> </p>
-            </div>
-        <div>
-            </div> -->
-       
-            <div class> 
-                <div class 
-                     role="status" id="loading"> 
-                    <span class>Loading...</span> 
-                </div> 
             </div> 
             <h1>Danmakus</h1> 
             <!-- table for showing data -->
             <table id="Danmakus"></table> 
-    
-    <a href="index.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
-        <img src="assets/Home.png" height=44px width=44px alt="Question"/>
-       
-            </Button></a>
-    
 
-  </body>
-  </html>
+            <a href="index.html"><Button onclick="myFunction()" classes={{root: classes.root}}variant="contained" color="primary" size="large">
+            <img src="assets/Home.png" height=44px width=44px alt="Question"/>
+
+            </Button></a>
+
+
+        </body>
+        </html>

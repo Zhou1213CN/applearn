@@ -5,12 +5,6 @@ import {
     useHistory
   } from "react-router-dom";
 
-import Navbar from './Navbar.js';
-import Player from './Player.js';
-import TimeManager from './TimeManager.js';
-import Bullet from './Bullet.js';
-import publicUrl from '../utils/publicUrl';
-
 function NewLecture(props) {
   const [dragging, setDragging] = useState(false); // to show a dragging effect
   const [desc, setDesc] = useState('');
@@ -52,8 +46,8 @@ function NewLecture(props) {
       props.addLecture(lecture,desc)
     //setLecture(e.target.value)
     setError('');
-    let player = new Player(publicUrl('/assets/Firstclass.mp4'));
-    player.appendTo("body");
+  //  let player = new Player(publicUrl('/assets/Firstclass.mp4'));
+   // player.appendTo("body");
    
   //  history.push('/');
 
@@ -91,7 +85,7 @@ function NewLecture(props) {
             {/* 
             <a href="dan.html"> Share</a> */}
            
-           <button onClick={handleSubmit}>Share</button> 
+          <a href="dan.html"> <button onClick={handleSubmit}>Share</button> </a>
         </div>
         <div>{/* <Navbar/> */}
     

@@ -6,18 +6,6 @@ import { Route } from 'react-router-dom';
 
 
 function Navbar() {
-        /*<div className={css.navItem}>
-            <a href="barrage.html"> <img src={publicUrl('/assets/Classroom.png')} alt="Danmaku"/></a>
-
-            </div>*/
-            /*
-            <div className={css.navItem}>
-                <Link to="/Home">
-                        <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/>
-                </Link>
-            
-            </div>
-          */
   return (
         <nav className={css.navbar}>
 
