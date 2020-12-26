@@ -10,32 +10,31 @@ import Navbar from './Navbar.js';
 
 
 function Login() {
-
+   
     return (
-   <div className={css.App} style={{backgroundImage: `url(${login})`}}>
-            <div>
-                <Header/>
-            </div>
-            <div className={css.Appcontent}>
+    <div className={css.App}>
             
-            
-            <a href="dan.html"><Button onclick="myFunction()" variant="contained" color="primary" size="large">
-            <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmakuhiuhg
-                </Button></a>
+            <div> <Header/></div>
         
-            
-            <br></br>
-          
-            <a href="quiz.html"><Button onclick="myFunction()" variant="contained" color="primary" size="large">
-            <img src={publicUrl('/assets/Question.png')} alt="Question"/> With Quiz
-                </Button></a>
-            </div>
-        
-    
-            <div><Navbar/></div>
+        <div className={css.Appcontent}>
+        <div className = {css.bg-image}>
+        < img src={publicUrl('/assets/hunt1.jpg')} alt="Hunt Library"/>
         </div>
+        <a id = "classroom" href="dan.html" ><Button variant="contained" color="primary" size="large">
+        <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku Mode
+            </Button></a>
+    
         
-    )
+      
+        <a id = "quiz" href="quiz.html"><Button variant="contained" color="primary" size="large">
+        <img src={publicUrl('/assets/Question.png')} alt="Question"/> Quiz Mod
+            </Button></a>
+        </div>
+    
+            
+    </div>
+        
+    );
 }
 
 export default Login;
