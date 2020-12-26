@@ -29,12 +29,14 @@ b
     text-align: center;
   }*/
 }
+/*
+font-family: Futura, "Trebuchet MS", Arial, sans-serif;*/
 
 h1 {
   padding-top: 30px;
   text-align: center;
   color: white;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-variant: normal;

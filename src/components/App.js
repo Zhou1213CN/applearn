@@ -16,7 +16,6 @@ function App() {
 
 
   const [store, setStore] = useState(initialStore);
-
   function addDanmaku(lectureId, text){
     const danmaku = {
       userId: store.currentUserId, 
@@ -46,19 +45,7 @@ function App() {
     });
   }
 
-  /*<Route path="/home">
-            <div>
-              <Home
-              store={store}
-              onDanmaku={addDanmaku}/>
-            </div>
-            </Route>*/
   
-            /*<div>
-              {<Home
-              store={store}
-              onDanmaku={addDanmaku}/>
-            </div> */
   return (
 		<Router basename={process.env.PUBLIC_URL}>
       

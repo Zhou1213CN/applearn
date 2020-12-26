@@ -10,24 +10,30 @@ import Navbar from './Navbar.js';
 
 
 function Login() {
-   
+   //  <img id="bg-image" src={publicUrl('/assets/hunt1.jpg')} alt="Hunt Library"/>
     return (
     <div className={css.App}>
             
             <div> <Header/></div>
         
+          
         <div className={css.Appcontent}>
-        <div className = {css.bg-image}>
-        < img src={publicUrl('/assets/hunt1.jpg')} alt="Hunt Library"/>
-        </div>
+       
+      
+       <p> </p>
         <a id = "classroom" href="dan.html" ><Button variant="contained" color="primary" size="large">
+     
         <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku Mode
             </Button></a>
     
-        
+            <Link to="/NewLecture"><Button variant="contained" color="primary" size="large">
+                    <img src={publicUrl('/assets/add1.png')} alt="Add1"/> Lecture Mode
+                    </Button>
+             </Link> 
+
       
         <a id = "quiz" href="quiz.html"><Button variant="contained" color="primary" size="large">
-        <img src={publicUrl('/assets/Question.png')} alt="Question"/> Quiz Mod
+        <img src={publicUrl('/assets/Question.png')} alt="Question"/> Question Mode
             </Button></a>
         </div>
     

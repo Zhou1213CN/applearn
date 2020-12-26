@@ -10,7 +10,7 @@ function Header() {
             <nav className={css.navbar}>
                 <div className={css.navItem}>
                 <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true}>
-                    <h1>Welcome to Virtual Classroom !</h1>
+                    <h1>Welcome to Virtual Classroom!</h1>
                     <p>Our learning app is designed to provide an interactive virtual classroom.</p>
                 </Animated>
                 </div>
