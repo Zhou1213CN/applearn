@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/applearn/static/css/main.44b12252.chunk.css",
-    "main.js": "/applearn/static/js/main.4c735b5a.chunk.js",
-    "main.js.map": "/applearn/static/js/main.4c735b5a.chunk.js.map",
-    "runtime-main.js": "/applearn/static/js/runtime-main.2520f69f.js",
-    "runtime-main.js.map": "/applearn/static/js/runtime-main.2520f69f.js.map",
-    "static/js/2.786f2cb0.chunk.js": "/applearn/static/js/2.786f2cb0.chunk.js",
-    "static/js/2.786f2cb0.chunk.js.map": "/applearn/static/js/2.786f2cb0.chunk.js.map",
-    "static/js/3.2b9f1152.chunk.js": "/applearn/static/js/3.2b9f1152.chunk.js",
-    "static/js/3.2b9f1152.chunk.js.map": "/applearn/static/js/3.2b9f1152.chunk.js.map",
+    "main.css": "/applearn/static/css/main.bfc86cae.chunk.css",
+    "main.js": "/applearn/static/js/main.d3d13496.chunk.js",
+    "main.js.map": "/applearn/static/js/main.d3d13496.chunk.js.map",
+    "runtime-main.js": "/applearn/static/js/runtime-main.090ced44.js",
+    "runtime-main.js.map": "/applearn/static/js/runtime-main.090ced44.js.map",
+    "static/js/2.322bbfbc.chunk.js": "/applearn/static/js/2.322bbfbc.chunk.js",
+    "static/js/2.322bbfbc.chunk.js.map": "/applearn/static/js/2.322bbfbc.chunk.js.map",
+    "static/js/3.7408a866.chunk.js": "/applearn/static/js/3.7408a866.chunk.js",
+    "static/js/3.7408a866.chunk.js.map": "/applearn/static/js/3.7408a866.chunk.js.map",
     "index.html": "/applearn/index.html",
-    "static/css/main.44b12252.chunk.css.map": "/applearn/static/css/main.44b12252.chunk.css.map",
-    "static/js/2.786f2cb0.chunk.js.LICENSE.txt": "/applearn/static/js/2.786f2cb0.chunk.js.LICENSE.txt",
-    "static/media/CSdpt.6ec70e83.jpeg": "/applearn/static/media/CSdpt.6ec70e83.jpeg"
+    "static/css/main.bfc86cae.chunk.css.map": "/applearn/static/css/main.bfc86cae.chunk.css.map",
+    "static/js/2.322bbfbc.chunk.js.LICENSE.txt": "/applearn/static/js/2.322bbfbc.chunk.js.LICENSE.txt",
+    "static/media/CSdpt.6ec70e83.jpeg": "/applearn/static/media/CSdpt.6ec70e83.jpeg",
+    "static/media/Login.module.css": "/applearn/static/media/hunt2.8de50a1a.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2520f69f.js",
-    "static/js/2.786f2cb0.chunk.js",
-    "static/css/main.44b12252.chunk.css",
-    "static/js/main.4c735b5a.chunk.js"
+    "static/js/runtime-main.090ced44.js",
+    "static/js/2.322bbfbc.chunk.js",
+    "static/css/main.bfc86cae.chunk.css",
+    "static/js/main.d3d13496.chunk.js"
   ]
 }
