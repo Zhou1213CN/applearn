@@ -11,7 +11,8 @@ import Navbar from './Navbar.js';
 
 function Login() {
    //  <img id="bg-image" src={publicUrl('/assets/hunt1.jpg')} alt="Hunt Library"/>
-    return (
+    // <!--<base target="_black" href="dan.html"> --></base>
+   return (
     <div className={css.App}>
             
             <div> <Header/></div>
@@ -21,7 +22,10 @@ function Login() {
        
       
        <p> </p>
-        <a id = "classroom" href="dan.html" ><Button variant="contained" color="primary" size="large">
+        <a id = "classroom" href="/applearn/dan.html" >
+            
+       
+            <Button variant="contained" color="primary" size="large">
      
         <img src={publicUrl('/assets/Classroom.png')} alt="Classroom"/> Danmaku Mode
             </Button></a>
@@ -32,7 +36,7 @@ function Login() {
              </Link> 
 
       
-        <a id = "quiz" href="quiz.html"><Button variant="contained" color="primary" size="large">
+        <a id = "quiz" href="/applearn/quiz.html"><Button variant="contained" color="primary" size="large">
         <img src={publicUrl('/assets/Question.png')} alt="Question"/> Question Mode
             </Button></a>
         </div>

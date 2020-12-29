@@ -11,6 +11,7 @@ function NewLecture(props) {
   const [lecture, setLecture] = useState(null);
   const [error, setError] = useState(''); // to show an error message
   const history = useHistory();
+
   function handleFileDragEnter(e){
     setDragging(true);
   }
@@ -26,8 +27,8 @@ function NewLecture(props) {
       if (file.size>1000000){// larger than 1 MB
         return;
       }
-      if (file.type.match(/video.*/)){
-        //if (file.type.match(/image.*/)){
+     // if (file.type.match(/video.*/)){
+      if (file.type.match(/image.*/)){
 				let reader = new FileReader();			
 				reader.onloadend = (e) => {
 					setLecture(e.target.result)
@@ -43,13 +44,16 @@ function NewLecture(props) {
   }
   function handleSubmit(e){
       e.preventDefault();
-      props.addLecture(lecture,desc)
+    //  props.addLecture(lecture,desc)
+     // addLecture(lecture,desc);
     //setLecture(e.target.value)
     setError('');
   //  let player = new Player(publicUrl('/assets/Firstclass.mp4'));
    // player.appendTo("body");
    
-  //  history.push('/');
+  // const AV = require('leancloud-storage');
+  // const { Query, User } = AV;
+    history.push('/');
 
 
   }
